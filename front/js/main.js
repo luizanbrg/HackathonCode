@@ -1,29 +1,26 @@
 // Event listener for "Melody's Section" (Tremblement de Terre section)
 document.addEventListener('DOMContentLoaded', () => {
-    // Array to hold questions, options, and associated images
+    // Array to hold questions, options, and associated images for each option
     const questions = [
         {
             text: "Tu es en classe en train de travailler tranquillement avec tes camarades quand, soudain, tout se met à trembler. Que fais-tu?",
-            image: "images/Q1-OP1.png",
             options: [
-                { text: "Se protéger sous un bureau.", nextQuestion: 1 },
-                { text: "Courir près des fenêtres", nextQuestion: 2 }
+                { text: "Se protéger sous un bureau.", nextQuestion: 1, image: "images/Q1-OP1.png" },
+                { text: "Courir près des fenêtres", nextQuestion: 2, image: "images/Q1-OP2.png" }
             ]
         },
         {
             text: "Bonne réponse! Le tremblement de terre continue. Que fais-tu ensuite?",
-            image: "images/Q1-OP2.png",
             options: [
-                { text: "Reste sous le bureau", nextQuestion: null },
-                { text: "Essaye de sortir de la salle", nextQuestion: null }
+                { text: "Reste sous le bureau", nextQuestion: null, image: "images/Q2-OP1.png" },
+                { text: "Essaye de sortir de la salle", nextQuestion: null, image: "images/Q2-OP2.png" }
             ]
         },
         {
             text: "Mauvaise réponse! Que fais-tu maintenant?",
-            image: "images/question3.jpg",
             options: [
-                { text: "Se protéger sous un bureau", nextQuestion: 1 },
-                { text: "Essaye de sortir de la salle", nextQuestion: null }
+                { text: "Se protéger sous un bureau", nextQuestion: 1, image: "images/Q3-OP1.png" },
+                { text: "Essaye de sortir de la salle", nextQuestion: null, image: "images/Q3-OP2.png" }
             ]
         }
     ];
@@ -47,10 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('div');
             card.className = `card ${i % 2 === 0 ? 'card-blue' : 'card-green'}`;
 
-            // Add the question-specific image above the option text
+            // Add the option-specific image above the option text
             const img = document.createElement('img');
-            img.src = question.image;
-            img.alt = "Question Image";
+            img.src = option.image; // Use the option's image, not the question's image
+            img.alt = "Option Image";
             img.className = "option-image";
             card.appendChild(img);
 
@@ -75,6 +72,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial render of the first question
     renderQuestion(currentQuestionIndex);
 });
-
-
-
