@@ -8,6 +8,79 @@ body {
 }
 
 
+/* Container and Card Styling */
+.container {
+    text-align: center;
+    margin: 20px;
+}
+
+.question {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Stack image on top of text */
+    align-items: center; /* Center align the content */
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.option-image {
+    width: 100px; /* Adjust the width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 10px; /* Space between the image and text */
+}
+
+.card {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* For hover effect */
+}
+
+.card-blue {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.card-green {
+    background-color: #7ed321;
+    color: white;
+}
+
+.card-red {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.card-yellow {
+    background-color: #f1c40f;
+    color: white;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Hover effect to move the card up */
+}
+
+
+
+
 /* ==========================================================================
    Your custom CSS styles for smartphones and screens smaller than 480 px
    ========================================================================== */

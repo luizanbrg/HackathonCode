@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alert4Sud - Sensibilisation aux Catastrophes Naturelles</title>
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/html5-boilerplate.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    
+  </head>
+
+    <body>
+
+        <header>
+            <nav class="container-header">
+              <a href="index.html" class="logo-header">
+                <img src="images/logo-alert4sud.svg" alt="code4sud logo" />
+              </a>
+              <div class="menu-container">
+                <button id="menuToggle" class="menu-burger">
+                  <img src="images/burger-icon.svg" alt="menu burger" />
+                </button>
+                <div id="drawer" class="drawer hidden">
+                  <button id="closeDrawer" class="close-button">
+                    <svg
+                      class="close-icon"
+                      width="40"
+                      height="40"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="white"
+                      viewBox="0 0 24 24"
+                    >
+                      <path stroke="currentColor" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                  <div class="drawer-content">
+                    <ul id="menuList" class="menu-list"></ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </header>
+          
+        <div class="container">
+            <div class="question">Tu es en classe en train de travailler tranquillement avec tes camarades quand, soudain, tout se met à trembler. Les objets sur les tables tombent, les lumières clignotent, et la terre gronde sous tes pieds. Tu réalises que c’est un tremblement de terre</div>
+            <div class="cards" id="cardsContainer">
+                <div class="card card-blue" id="card1">Se protéger sous un bureau.
+                
+                </div>
+                <div class="card card-green" id="card2">Courir près des fenêtres</div>
+            </div>
+        </div>
+        
+    
+        <script src="script.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
